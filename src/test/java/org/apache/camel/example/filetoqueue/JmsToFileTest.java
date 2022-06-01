@@ -22,7 +22,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.RoutesBuilder;
 import org.apache.camel.builder.NotifyBuilder;
 import org.apache.camel.component.jms.JmsComponent;
@@ -30,7 +29,7 @@ import org.apache.camel.spi.Registry;
 import org.apache.camel.test.junit5.CamelTestSupport;
 import org.junit.jupiter.api.Test;
 
-import static org.apache.camel.example.jmstofile.CamelJmsToFileExample.createActiveMQConnectionFactory;
+import static org.apache.camel.example.jmstofile.FileToActiveMqQueue.createActiveMQConnectionFactory;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -61,6 +60,6 @@ class JmsToFileTest extends CamelTestSupport {
 
     @Override
     protected RoutesBuilder createRouteBuilder() {
-        return new CamelJmsToFileExample.MyRouteBuilder();
+        return new FileToActiveMqQueue.MyRouteBuilder();
     }
 }

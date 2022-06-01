@@ -139,7 +139,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.apache.camel.example.jmstofile.CamelJmsToFileExample</mainClass>
+                    <mainClass>org.apache.camel.example.filetoqueue.FileToActiveMqQueue</mainClass>
                     <includePluginDependencies>false</includePluginDependencies>
                 </configuration>
             </plugin>
