@@ -2,13 +2,16 @@
 
 === Introduction
 
-This example shows how to work with files and ActiveMQ queues using Apache Camel integration framework.
+This example shows how to work with files and https://activemq.apache.org/[ActiveMQ] queues using https://camel.apache.org/[_Apache Camel_] integration framework.
 
 It reads files from a folder and writes them to a queue.
 
 === Prerequisites
 
-First make sure ActiveMQ server is up and running. If not, you can start it from the terminal: `docker-compose up -d`.
+First make sure ActiveMQ server is up and running. If not, you can start it from the terminal:
+----
+docker-compose up -d
+----
 
 After that open http://localhost:8161/admin/queues.jsp in browser (username=_admin_, password=_admin_) and create a queue with the name _replyTo_.
 
@@ -30,4 +33,4 @@ The example should run if you type
 $ mvn exec:java
 ----
 
-After the example is complete, you should see 9 new pending messages in queue _replyTo_ at http://localhost:8161/admin/queues.jsp.
+After the example is complete, open http://localhost:8161/admin/queues.jsp from your browser. You should see 9 new pending messages the queue named _replyTo_.
