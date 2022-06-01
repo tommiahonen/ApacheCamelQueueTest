@@ -1,11 +1,16 @@
-== JMS & File Example
+== ActiveMQ and Files example
 
 === Introduction
 
-This example shows how to work with files and JMS.
+This example shows how to work with files and ActiveMQ queues.
 
-The example consumes messages from a queue and writes them to the file
-system.
+It reads files from a folder and writes them to a queue.
+
+=== Prerequisites
+
+First make sure ActiveMQ server is up and running. If not, you can start it from the terminal: `docker-compose up -d`.
+
+After that open http://localhost:8161/admin/queues.jsp in browser (username=_admin_, password=_admin_) and create a queue with the name _replyTo_.
 
 === Build
 
@@ -25,15 +30,4 @@ The example should run if you type
 $ mvn exec:java
 ----
 
-After the example is complete, then there should be 10 files written in
-the directory `target/messages`.
-
-=== Help and contributions
-
-If you hit any problem using Camel or have some feedback, then please
-https://camel.apache.org/community/support/[let us know].
-
-We also love contributors, so
-https://camel.apache.org/community/contributing/[get involved] :-)
-
-The Camel riders!
+After the example is complete, you should see 9 new pending messages in queue _replyTo_ at http://localhost:8161/admin/queues.jsp.
