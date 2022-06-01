@@ -9,6 +9,7 @@ It reads files from a folder and writes them to a queue.
 === Prerequisites
 
 First make sure ActiveMQ server is up and running. If not, you can start it from the terminal:
+[source,sh]
 ----
 $ docker-compose up -d
 ----
