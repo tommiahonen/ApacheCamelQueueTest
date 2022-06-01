@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.camel.example.jmstofile;
+package org.apache.camel.example.filetoqueue;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.CamelContext;
@@ -57,7 +57,7 @@ public final class FileToActiveMqQueue {
 
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(username, password, brokerURI);
         connectionFactory.setTrustAllPackages(false);
-        connectionFactory.setTrustedPackages(singletonList("org.apache.camel.example.jmstofile"));
+        connectionFactory.setTrustedPackages(singletonList("org.apache.camel.example.filetoqueue"));
         return connectionFactory;
     }
 
