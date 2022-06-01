@@ -10,7 +10,7 @@ It reads files from a folder and writes them to a queue.
 
 First make sure ActiveMQ server is up and running. If not, you can start it from the terminal:
 ----
-docker-compose up -d
+$ docker-compose up -d
 ----
 
 After that open http://localhost:8161/admin/queues.jsp in browser (username=_admin_, password=_admin_) and create a queue with the name _replyTo_.
