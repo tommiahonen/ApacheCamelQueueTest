@@ -2,7 +2,7 @@
 
 === Introduction
 
-This example shows how to work with files and ActiveMQ queues.
+This example shows how to work with files and ActiveMQ queues using Apache Camel integration framework.
 
 It reads files from a folder and writes them to a queue.
 
