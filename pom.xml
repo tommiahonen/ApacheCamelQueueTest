@@ -25,6 +25,7 @@
         <groupId>org.apache.camel.example</groupId>
         <artifactId>examples</artifactId>
         <version>3.18.0-SNAPSHOT</version>
+        <relativePath>parentPom/pom.xml</relativePath>
     </parent>
 
     <artifactId>camel-example-jms-file</artifactId>
@@ -56,6 +57,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>
+            <version>3.17.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
