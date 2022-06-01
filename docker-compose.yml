@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  activemq-broker:
+    container_name: activemq-broker
+    image: rmohr/activemq
+    ports:
+      - "61616:61616"
+      - "8161:8161"
