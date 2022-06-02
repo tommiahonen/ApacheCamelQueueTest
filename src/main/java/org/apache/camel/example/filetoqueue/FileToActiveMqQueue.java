@@ -65,7 +65,7 @@ public final class FileToActiveMqQueue {
 
         @Override
         public void configure() {
-            from("file://messages")
+            from("file://messages?noop=true")
                     .log("${body}")
                     .to("replyTo-jms:queue:replyTo");
         }
