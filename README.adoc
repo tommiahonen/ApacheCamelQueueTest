@@ -14,8 +14,6 @@ First make sure ActiveMQ server is up and running. If not, you can start it from
 $ docker-compose up -d
 ----
 
-After that open http://localhost:8161/admin/queues.jsp in browser (username=_admin_, password=_admin_) and create a queue with the name _replyTo_.
-
 === Build
 
 You will need to compile this example first:
@@ -34,4 +32,4 @@ The example should run if you type
 $ mvn exec:java
 ----
 
-After the example is complete, open http://localhost:8161/admin/queues.jsp from your browser. You should see 9 new pending messages the queue named _replyTo_.
+After the example is complete, open http://localhost:8161/admin/queues.jsp from your browser (username=_admin_, password=_admin_). You should see 9 new pending messages the queue named _replyTo_.
